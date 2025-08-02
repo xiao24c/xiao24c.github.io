@@ -33,6 +33,46 @@ body {
 	line-height: 1;
 }
 
+a {
+  color: #333;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+a:hover {
+  color: #ff6f61;
+  text-decoration: underline;
+}
+
+/* 所有图片默认缩小 */
+img {
+    max-width: 80%;    /* 图片占宽度80% */
+    height: auto;      /* 保持比例 */
+    display: block;
+    margin: 10px auto; /* 居中 */
+}
+
+/* 并排显示的图片容器 */
+.image-row {
+    display: flex;
+    justify-content: center;  /* 居中对齐 */
+    gap: 20px;                /* 图片之间留间距 */
+    flex-wrap: wrap;          /* 小屏幕自动换行 */
+}
+
+/* 并排图片的大小 */
+.image-row img {
+    max-width: 45%;   /* 每张图占容器宽度的一半 */
+    height: auto;
+    border-radius: 5px; /* 可选：让图片有圆角 */
+}
+
+.more-coming {
+  margin-top: 15px;
+  color: #777;
+  text-align: center;
+  font-style: italic;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -1898,12 +1938,8 @@ input, select, textarea {
 		-moz-transition: opacity 1s ease-in-out;
 		-webkit-transition: opacity 1s ease-in-out;
 		-ms-transition: opacity 1s ease-in-out;
-		transition: opacity 1s ease-in-out;
+		transition: none;
 	}
-
-		body.is-preload #wrapper {
-			opacity: 0;
-		}
 
 		@media screen and (max-width: 1280px) {
 
